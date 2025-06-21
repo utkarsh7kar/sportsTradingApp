@@ -1,0 +1,48 @@
+@import './variables';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: $bg-color;
+  color: $text-color;
+  overflow-x: hidden;
+}
+
+.app {
+  margin: 0 16px;
+  background: $bg-color;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 60px; // Space for footer
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; // For smooth scrolling on iOS
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.trading-section {
+  display: flex;
+  flex-direction: row;
+  
+  .trading-interface {
+    width: 60%;
+  }
+  
+  .order-book {
+    width: 40%;
+  }
+}
+@import './Header';
+@import './TradingInterface';
+@import './OrderBook';
+@import './OpenOrders';
+@import './Footer';

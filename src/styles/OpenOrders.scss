@@ -1,0 +1,153 @@
+@import './variables';
+
+.open-orders {
+  background-color: $card-bg;
+  padding: 0;
+  border-top: 1px solid $border-color;
+  
+  @media (min-width: 768px) {
+    max-height: none;
+  }
+
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid $border-color;
+    
+    button {
+      background: none;
+      border: none;
+      padding: 8px 16px;
+      font-weight: 600;
+      color: $text-secondary;
+      cursor: pointer;
+      font-size: 14px;
+      flex: 1;
+      text-align: center;
+      
+      &.active {
+        color: $text-color;
+        border-bottom: 2px solid $text-color;
+      }
+    }
+  }
+
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid $border-color;
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      color: $text-secondary;
+      
+      input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+      }
+    }
+
+    .cancel-all {
+      background-color: $secondary-color;
+      border: none;
+      color: $text-color;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+  .order-item {
+    padding: 8px 16px;
+    border-bottom: 1px solid $border-color;
+
+    .order-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      .team {
+        font-weight: 600;
+        font-size: 16px;
+      }
+      
+      .percentage {
+        font-weight: 500;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        
+        .progress-bar {
+          width: 80px;
+          height: 6px;
+          background-color: $secondary-color;
+          border-radius: 3px;
+          overflow: hidden;
+          
+          .progress {
+            height: 100%;
+            background-color: $accent-color;
+            width: 0%;
+          }
+        }
+      }
+    }
+
+    .order-subheader {
+      margin-bottom: 8px;
+      color: $text-secondary;
+      font-size: 12px;
+    }
+
+    .order-details {
+      margin-bottom: 8px;
+      
+      .detail-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4px;
+        font-size: 12px;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+        
+        span:first-child {
+          color: $text-secondary;
+        }
+        
+        span:last-child {
+          font-weight: 500;
+        }
+      }
+    }
+
+    .cancel-btn {
+      background-color: $secondary-color;
+      border: none;
+      color: $text-color;
+      padding: 8px 16px;
+      border-radius: 8px;
+      float: right;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  .no-orders {
+    text-align: center;
+    padding: 20px;
+    color: $text-secondary;
+    font-size: 14px;
+  }
+}

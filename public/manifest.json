@@ -1,0 +1,9 @@
+{
+  "short_name": "Sports Trading",
+  "name": "Sports Trading Platform",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1a2a3a",
+  "background_color": "#121f28"
+}
